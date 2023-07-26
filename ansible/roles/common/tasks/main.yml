@@ -1,0 +1,21 @@
+---
+- name: update Sistema Operacional
+  apt:  
+    name: "*"
+
+- name: Instalando pacotes do desafio
+  apt:
+    name:
+    - vim
+    - curl
+    - telnet
+    - unzip
+    - wget
+    - net-tools
+    - htop
+    - nmap
+    state: present
+  become: true
+  become_method: sudo
+
+...
